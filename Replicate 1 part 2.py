@@ -1,9 +1,5 @@
 import cv2
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
-from matplotlib import colors
-from matplotlib.colors import hsv_to_rgb
 import numpy as np
 flags = [i for i in dir(cv2) if i.startswith('COLOR_')]
 
@@ -13,7 +9,7 @@ state = 0
 # if it's 3 that means it's dead
 # 0 is just being used as a placeholder for now
 
-# Get the picture:
+# Get the image
 path_input = input("Please input the name of a downloaded image:\n")
 path = f"/Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/{path_input}" # insert your own file path
 coral_1 = cv2.imread(path)
@@ -69,27 +65,6 @@ if state == 3:
     print("This image shows a dead coral.")
 
 plt.show()
-
-""" info:
-
-alive 1 = /Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/alive coral 1.png
-avg_rgb = [ 80.58274935  77.33952761 127.17205503]
-
-alive 2 = /Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/alive coral 2.png
-avg_rgb = [116.32602708  53.84148189  31.99274824]
-
-
-
-bleached 1 = /Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/bleached coral 1.png
-avg_rgb = [147.83832106 147.38571897 126.39375754]
-
-bleached 2 = /Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/bleached coral 2.png
-avg_rgb = [185.75170534 182.55972926 175.26422127]
-
-
-
-dead 1 = /Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/dead coral 1.png
-avg_rgb = [65.46923785 78.03089058 63.99304222]
 
 dead 2 = /Users/Home/Documents/Python Projects/TKS 24-25/Replicate 1/dead coral 2.png
 avg_rgb = [ 76.12816933 105.25936734  93.96454954]
