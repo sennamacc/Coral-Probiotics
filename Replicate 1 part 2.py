@@ -1,7 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-flags = [i for i in dir(cv2) if i.startswith('COLOR_')]
 
 state = 0
 # if it's 1 that means it's alive
